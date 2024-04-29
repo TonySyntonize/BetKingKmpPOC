@@ -25,7 +25,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            //put your multiplatform dependencies here
+            api(projects.shared.features.login.data)
+            api(projects.shared.features.login.domain)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
